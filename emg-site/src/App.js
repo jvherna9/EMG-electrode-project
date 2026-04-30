@@ -9,7 +9,7 @@ function App() {
     { id: "test", label: "Experimental Setup" },
     { id: "circuit", label: "Circuit" },
     { id: "videos", label: "Videos" },
-    { id: "results", label: "Results" },
+    { id: "results", label: "results" },
     { id: "limitations", label: "Limitations" },
   ];
 
