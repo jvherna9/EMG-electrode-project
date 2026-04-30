@@ -16,11 +16,25 @@ function App() {
   return (
     <div style={styles.page}>
       <header style={styles.header}>
-        <h1 style={styles.title}>EMG Electrode Project ᕙ(⇀‸↼‶)ᕗ</h1>
-        <p style={styles.subtitle}>
-          Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
-        </p>
-      </header>
+
+        <img 
+          src="/EMGlogo1.png" 
+          alt="EMG Logo" 
+          style={{
+            width: "120px",
+            display: "block",
+            margin: "0 auto 15px auto",
+            borderRadius: "15px"
+    }} 
+  />
+
+  <h1 style={styles.title}>EMG Electrode Project ᕙ(⇀‸↼‶)ᕗ</h1>
+
+  <p style={styles.subtitle}>
+    Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
+  </p>
+
+</header>
 
       <nav style={styles.tabs}>
         {tabs.map((tab) => (
