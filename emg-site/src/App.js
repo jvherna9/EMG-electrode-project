@@ -1,0 +1,322 @@
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [activeTab, setActiveTab] = useState("problem");
+
+  const tabs = [
+    { id: "problem", label: "Problem" },
+    { id: "test", label: "Experimental Setup" },
+    { id: "circuit", label: "Circuit" },
+    { id: "videos", label: "Videos" },
+    { id: "results", label: "Results" },
+    { id: "limitations", label: "Limitations" },
+  ];
+
+  return (
+    <div style={styles.page}>
+      <header style={styles.header}>
+        <h1 style={styles.title}>EMG Electrode Project ᕙ(⇀‸↼‶)ᕗ</h1>
+        <p style={styles.subtitle}>
+          Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
+        </p>
+      </header>
+
+      <nav style={styles.tabs}>
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            style={{
+              ...styles.tabButton,
+              ...(activeTab === tab.id ? styles.activeTab : {}),
+            }}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
+
+      <main style={styles.card}>
+        {activeTab === "problem" && (
+          <section>
+            <h2> ⚛ Problem</h2>
+            <p>
+              Surface EMG signals are small electrical signals produced when muscles
+              activate. These signals can be noisy and inconsistent, which makes them
+              difficult to use for applications like robotic prosthetics.
+            </p>
+            <p>
+              Our project tested whether increasing the number of electrodes improves
+              EMG signal quality and muscle activity detection.
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <img src="/thinkingcat.jpg" alt="cat" width="200" />
+            </div>
+          </section>
+        )}
+
+        {activeTab === "test" && (
+          <section>
+            <h2>🧪 Test Format</h2>
+            <p>We tested three electrode configurations:</p>
+            <ul>
+              <li>2 electrodes</li>
+              <li>4 electrodes</li>
+              <li>6 electrodes</li>
+            </ul>
+            <p>For each setup, we recorded:</p>
+            <ul>
+              <li>Rest</li>
+              <li>Light contraction</li>
+              <li>Strong contraction</li>
+            </ul>
+            <p>
+              Data was collected using LabVIEW and myDAQ, then analyzed in MATLAB.
+            </p>
+          </section>
+        )}
+
+        {activeTab === "circuit" && (
+          <section>
+            <h2>🔌 Circuit Explanation</h2>
+            <div style={styles.grid}>
+              <InfoBox
+                title="Instrumentation Amplifier"
+                text="Measures small voltage differences from the electrodes while reducing common noise."
+              />
+              <InfoBox
+                title="Band-Pass Filter"
+                text="Filters the EMG signal so unwanted low-frequency drift and high-frequency noise are reduced."
+              />
+              <InfoBox
+                title="Inverting Amplifier"
+                text="Amplifies the signal so it can be clearly recorded by the myDAQ."
+              />
+            </div>
+          </section>
+        )}
+
+        {activeTab === "videos" && (
+          <section>
+            <h2>👾 LAB VIDEOS</h2>
+            <p>
+              Our EMG Project videos ♡.
+            </p>
+
+            <div style={{ textAlign: "center" }}>
+              <h3>Circuit Setup Video</h3>
+              <p>Breadboard, electrodes, myDAQ connection, and LabVIEW setup.</p>
+
+              <video controls muted style={{ width: "300px" }}>
+                <source src="/EMGcircuit.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <VideoBox
+              title="Data Collection Video"
+              src="/data-collection.mp4"
+              description="Show how rest, light contraction, and strong contraction trials were recorded."
+            />
+
+        
+          </section>
+        )}
+
+        {activeTab === "results" && (
+          <section>
+            <h2>📶 Results</h2>
+            <p>
+              The female data showed that electrode count affected EMG signal quality,
+              but the results were not perfectly consistent between subjects.
+            </p>
+
+            <div style={styles.grid}>
+              <InfoBox
+                title="Female A & B"
+                text="Female A showed more variability. The signal dropped at 4 electrodes and increased again at 6 electrodes, likely due to inconsistent contractions or electrode placement. Female B showed a clearer improvement at 4 electrodes, with stronger RMS and peak-to-peak signal values."
+              />
+              <InfoBox
+                title="Male A & B"
+                text="..."
+              />
+            </div>
+
+            <h3>Key Graphs</h3>
+            <p>
+              Female & Male Results.
+            </p>
+
+            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" />
+            <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" />
+            <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" />
+          </section>
+        )}
+
+        {activeTab === "limitations" && (
+          <section>
+            <h2>⚠️ Limitations & Future Work</h2>
+            <ul>
+              <li>Only two female subjects were analyzed.</li>
+              <li>Female A had less consistent contractions, which affected the data.</li>
+              <li>Electrode placement may have changed signal quality.</li>
+              <li>More subjects are needed to confirm the trend.</li>
+              <li>Future tests should standardize contraction strength and electrode placement.</li>
+            </ul>
+
+            <h2>💡 Why This Matters</h2>
+            <p>
+              This project provides useful information for prosthetics and muscle-controlled
+              devices because EMG systems need clean and reliable signals to interpret
+              muscle activation.
+            </p>
+          </section>
+        )}
+      </main>
+
+      <footer style={styles.footer}>
+        <p>EMG Electrode Sensitivity Project • BME 370</p>
+        <p style={{ marginTop: "10px" }}>
+          Dayra Miles 𖹭, Deepashree Domlur Raghavendra ☘, Jhoana Hernandez 𓇼
+        </p>
+      </footer>
+    </div>
+  );
+}
+
+function InfoBox({ title, text }) {
+  return (
+    <div style={styles.infoBox}>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function VideoBox({ title, src, description }) {
+  return (
+    <div style={styles.mediaBox}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <video controls style={styles.video}>
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+}
+
+function ImageBox({ title, src }) {
+  return (
+    <div style={{ ...styles.mediaBox, textAlign: "left" }}>
+      <h3>{title}</h3>
+
+      <img
+        src={src}
+        alt={title}
+        style={{
+          width: "50%",          // controls size
+          maxWidth: "500px",     // prevents it from getting huge
+          height: "auto",
+          borderRadius: "15px",
+          border: "2px solid #ffcce5",
+          marginTop: "10px"
+        }}
+      />
+    </div>
+  );
+}
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    background: "linear-gradient(135deg, #fff0f7, #ffffff)",
+    color: "#4a1733",
+    fontFamily: "Arial, sans-serif",
+    padding: "30px",
+  },
+  header: {
+    textAlign: "center",
+    padding: "35px 20px",
+    backgroundColor: "#ffcce5",
+    borderRadius: "25px",
+    boxShadow: "0 8px 20px rgba(255, 105, 180, 0.25)",
+  },
+  title: {
+    fontSize: "42px",
+    marginBottom: "10px",
+    color: "#b0005a",
+  },
+  subtitle: {
+    fontSize: "18px",
+    color: "#6b2447",
+  },
+  tabs: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "10px",
+    margin: "25px 0",
+  },
+  tabButton: {
+    padding: "12px 18px",
+    borderRadius: "999px",
+    border: "2px solid #ff8fc7",
+    backgroundColor: "white",
+    color: "#b0005a",
+    fontWeight: "bold",
+    cursor: "pointer",
+  },
+  activeTab: {
+    backgroundColor: "#ff69b4",
+    color: "white",
+  },
+  card: {
+    maxWidth: "1000px",
+    margin: "0 auto",
+    backgroundColor: "white",
+    borderRadius: "25px",
+    padding: "30px",
+    boxShadow: "0 8px 25px rgba(255, 105, 180, 0.2)",
+    lineHeight: "1.7",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+    gap: "18px",
+    marginTop: "20px",
+  },
+  infoBox: {
+    backgroundColor: "#fff0f7",
+    border: "2px solid #ffcce5",
+    borderRadius: "20px",
+    padding: "20px",
+  },
+  mediaBox: {
+    backgroundColor: "#fff0f7",
+    border: "2px solid #ffcce5",
+    borderRadius: "20px",
+    padding: "20px",
+    marginTop: "20px",
+  },
+  video: {
+    width: "100%",
+    maxHeight: "500px",
+    borderRadius: "15px",
+    marginTop: "10px",
+    backgroundColor: "#f8c7dd",
+  },
+  image: {
+    width: "100%",
+    borderRadius: "15px",
+    marginTop: "10px",
+    border: "2px solid #ffcce5",
+  },
+  footer: {
+    textAlign: "center",
+    marginTop: "35px",
+    color: "#8a3a5f",
+  },
+};
+
+export default App;
