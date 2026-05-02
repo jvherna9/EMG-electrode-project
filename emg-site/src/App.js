@@ -144,18 +144,19 @@ function App() {
           <section>
             <h2>📶 Results</h2>
             <p>
-              The female data showed that electrode count affected EMG signal quality,
-              but the results were not perfectly consistent between subjects.
+              The results show that electrode count significantly impacts EMG signal quality. While trends varied slightly
+              between subjcts, an intermediate electrode configuration of 4 provided the most consistent reliable signal 
+              peformance. 
             </p>
 
             <div style={styles.grid}>
               <InfoBox
                 title="Female A & B"
-                text="Female A showed more variability. The signal dropped at 4 electrodes and increased again at 6 electrodes, likely due to inconsistent contractions or electrode placement. Female B showed a clearer improvement at 4 electrodes, with stronger RMS and peak-to-peak signal values."
+                text="Female A showed more variability. The signal dropped at 4 electrodes and increased again at 6 electrodes, likely due to inconsistent contractions or electrode placement. Female B showed a clearer improvement at 4 electrodes, with stronger RMS and peak-to-peak signal values, indicating better signal quality."
               />
               <InfoBox
                 title="Male A & B"
-                text="..."
+                text="Both male subjects showed a more consistent trend compared to the female data. Signal-to-noise ratio improved from 2 to 4 electrodes, indicating better signal quality clarity. RMS and peak-to-peak values generally decreased as electrode count increased, suggesting interference. Overall, 4 electrodes provided the best balance between signal quality and reliability."
               />
             </div>
 
