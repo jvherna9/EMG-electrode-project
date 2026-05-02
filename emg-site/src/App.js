@@ -110,8 +110,13 @@ function App() {
               />
               <InfoBox
                 title="Band-Pass Filter Schematic"
-               <img src="/Bandpassfilter.png" alt="Band-Pass Filter Circuit" width="200" />
-              />
+                image={
+                  <img
+                    src="/Bandpassfilter.png"
+                    alt="Band-Pass Filter Circuit"
+                    style={{width: "100%", maxWidth: "600px", borderRadius:"10px"}}
+                  />
+                 }
             </div>
           </section>
         )}
