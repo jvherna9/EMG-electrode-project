@@ -168,9 +168,9 @@ function App() {
               Female & Male Results.
             </p>
 
-            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" />
-            <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" />
-            <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" />
+            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" src2="/SNRmale.png"/>
+            <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" src2="/MaleRMS.png"/>
+            <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" src2="/RestFullMale.png"/>
           </section>
         )}
 
@@ -178,8 +178,8 @@ function App() {
           <section>
             <h2>⚠️ Limitations & Future Work</h2>
             <ul>
-              <li>Only two female subjects were analyzed.</li>
-              <li>Female A had less consistent contractions, which affected the data.</li>
+              <li>Only two female and male subjects were analyzed.</li>
+              <li>Female A & Male A had less consistent contractions, which affected the data.</li>
               <li>Electrode placement may have changed signal quality.</li>
               <li>More subjects are needed to confirm the trend.</li>
               <li>Future tests should standardize contraction strength and electrode placement.</li>
@@ -196,7 +196,7 @@ function App() {
       </main>
 
       <footer style={styles.footer}>
-        <p>EMG Electrode Sensitivity Project • BME 370</p>
+        <p>EMG Prosthetic Signal Project • BME 370</p>
         <p style={{ marginTop: "10px" }}>
           Dayra Miles 𖹭, Deepashree Domlur Raghavendra ☘, Jhoana Hernandez 𓇼
         </p>
