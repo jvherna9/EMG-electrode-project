@@ -16,7 +16,7 @@ function App() {
   return (
     <div style={styles.page}>
       <header style={styles.header}>
-        <h1 style={styles.title}>EMG Electrode Project ᕙ(⇀‸↼‶)ᕗ</h1>
+        <h1 style={styles.title}>Optimizing EMG Signals for Better Prosthetic Performance ᕙ(⇀‸↼‶)ᕗ</h1>
         <p style={styles.subtitle}>
           Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
         </p>
@@ -39,16 +39,24 @@ function App() {
 
       <main style={styles.card}>
         {activeTab === "problem" && (
-          <section>
-            <h2> ⚛ Problem</h2>
+          <section={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+            <h2> ⚛ Problem ⚛</h2>
             <p>
-              Surface EMG signals are small electrical signals produced when muscles
-              activate. These signals can be noisy and inconsistent, which makes them
-              difficult to use for applications like robotic prosthetics.
+              Modern upper-limb prosthetic systems rely on surface Electromyography (EMG) 
+              signal to interpret muscle activity and control movement. However, these 
+              systems typically use only a limited number of 2 electrodes, which restricts
+              their ability to capture accurate signals from muscle groups.
             </p>
             <p>
-              Our project tested whether increasing the number of electrodes improves
-              EMG signal quality and muscle activity detection.
+              This limited signal capture results in noisy and incomplete data, leading to 
+              inaccurate movement classification and reduced control accuracy. As a result, 
+              prosthetic devices often perform unreliably and can be difficult for users
+              to control.
+            </p>
+            <p>
+              This project investigates whether increasing the electrodes on a particular 
+              muscle group imrpoves the EMG signal quality and enables more accurage and 
+              reliable prosthetic control. 
             </p>
             <div style={{ textAlign: "center" }}>
               <img src="/thinkingcat.jpg" alt="cat" width="200" />
