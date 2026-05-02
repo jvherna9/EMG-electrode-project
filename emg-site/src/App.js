@@ -41,7 +41,13 @@ function App() {
       <main style={styles.card}>
         {activeTab === "problem" && (
           <section>
-            <h2> ⚛ Problem ⚛</h2>
+            <h2 style={{
+              textAlign: "center",
+              color: "#ff4da6",
+              marginBottom: "20px"
+            }}>
+              ⚛ Problem ⚛
+            </h2>
             <p>
               Modern upper-limb prosthetic systems rely on surface Electromyography (EMG) 
               signal to interpret muscle activity and control movement. However, these 
