@@ -130,11 +130,14 @@ function App() {
               </video>
             </div>
 
-            <VideoBox
-              title="Data Collection Video"
-              src="/data-collection.mp4"
-              description="Show how rest, light contraction, and strong contraction trials were recorded."
-            />
+            <div style={{ textAlign: "center" }}>
+              <h3>Data Collection Video</h3>
+              <p>Subject connected to all 6 electrodes, fully contracting.</p>
+
+              <video controls muted style={{ width: "300px" }}>
+                <source src="/Setupvid.mp4" type="video/mp4" />
+              </video>
+            </div>
 
         
           </section>
