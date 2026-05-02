@@ -19,7 +19,7 @@ function App() {
         <h1 style={{ ...styles.title, marginBottom: "30px" }}>Optimizing EMG Signals for Better Prosthetic Performance ᕙ(⇀‸↼‶)ᕗ</h1>
     
         <p style={styles.subtitle}>
-          Evaluating how electrode density impacts EMG signal quality and processing
+          Evaluating how electrode density impacts EMG signal quality and processing⚡
         </p>
       </header>
 
@@ -102,11 +102,11 @@ function App() {
               />
              <InfoBox
                 title="Band-Pass Filter"
-                text="Filters the EMG signal to remove low-frequency drift (motion artifacts)and high-frequency noise. Ensures only relevant muscle signal frequencies are preserved."
+                text="Filters the EMG signal to remove low-frequency drift (motion artifacts) and high-frequency noise. Ensures only relevant muscle signal frequencies are preserved."
               />
               <InfoBox
                 title="Inverting Amplifier"
-                text="Amplifies the signal so it can be clearly recorded by the myDAQ."
+                text="Amplifies the filtered EMG signal to a measurable volage rante so it can be clearly recorded by the myDAQ. The inverting amplifier provides controlled gain based on resistor values."
               />
             </div>
           </section>
