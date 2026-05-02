@@ -16,7 +16,8 @@ function App() {
   return (
     <div style={styles.page}>
       <header style={styles.header}>
-        <h1 style={styles.title}>Optimizing EMG Signals for Better Prosthetic Performance ᕙ(⇀‸↼‶)ᕗ</h1>
+        <h1 style={{ ...styles.title, marginBottom: "25px" }}>Optimizing EMG Signals for Better Prosthetic Performance ᕙ(⇀‸↼‶)ᕗ</h1>
+    
         <p style={styles.subtitle}>
           Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
         </p>
