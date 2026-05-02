@@ -227,23 +227,36 @@ function VideoBox({ title, src, description }) {
   );
 }
 
-function ImageBox({ title, src }) {
+function ImageBox({ title, src, src2, text }) {
   return (
-    <div style={{ ...styles.mediaBox, textAlign: "left" }}>
+    <div style={{ ...styles.mediaBox, textAlign: "center" }}>
       <h3>{title}</h3>
 
-      <img
-        src={src}
-        alt={title}
-        style={{
-          width: "50%",          // controls size
-          maxWidth: "500px",     // prevents it from getting huge
-          height: "auto",
-          borderRadius: "15px",
-          border: "2px solid #ffcce5",
-          marginTop: "10px"
-        }}
-      />
+      <div style={styles.imageGrid}>
+        <div>
+          {src && (
+            <img
+              src={src}
+              alt={`${title} female`}
+              style={styles.resultImage}
+            />
+          )}
+          {src2 && <p style={styles.caption}>Female Results</p>}
+        </div>
+
+        {src2 && (
+          <div>
+            <img
+              src={src2}
+              alt={`${title} male`}
+              style={styles.resultImage}
+            />
+            <p style={styles.caption}>Male Results</p>
+          </div>
+        )}
+      </div>
+
+      {text && <p style={styles.figureText}>{text}</p>}
     </div>
   );
 }
