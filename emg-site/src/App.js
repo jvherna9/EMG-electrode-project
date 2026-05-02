@@ -49,19 +49,19 @@ function App() {
               ⚛ Problem ⚛
             </h2>
             <p>
-              Modern upper-limb prosthetic systems rely on surface Electromyography (EMG) 
+                Modern upper-limb prosthetic systems rely on surface Electromyography (EMG) 
               signal to interpret muscle activity and control movement. However, these 
               systems typically use only a limited number of 2 electrodes, which restricts
               their ability to capture accurate signals from muscle groups.
             </p>
             <p>
-              This limited signal capture results in noisy and incomplete data, leading to 
+                This limited signal capture results in noisy and incomplete data, leading to 
               inaccurate movement classification and reduced control accuracy. As a result, 
               prosthetic devices often perform unreliably and can be difficult for users
               to control.
             </p>
             <p>
-              This project investigates whether increasing the electrodes on a particular 
+                This project investigates whether increasing the electrodes on a particular 
               muscle group imrpoves the EMG signal quality and enables more accurage and 
               reliable prosthetic control. 
             </p>
@@ -270,7 +270,7 @@ function ImageBox({ title, src, src2, text }) {
       {text && (
         <p style={{
           marginTop: "12px",
-          fontSize: "14px",
+          fontSize: "13px",
           color: "#6b2447",
           maxWidth: "600px",
           marginLeft: "auto",
