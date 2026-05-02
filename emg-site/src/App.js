@@ -98,11 +98,23 @@ function App() {
             <div style={styles.grid}>
               <InfoBox
                 title="Instrumentation Amplifier"
-                text="Measures small voltage differences from the electrodes while reducing common noise."
+                text="Measures small voltage differences from the electrodes while reducing common-mode noise, such as electrical inteference. This stage is critical for capturing clean EMG signals from muscle activity."
               />
               <InfoBox
                 title="Band-Pass Filter"
-                text="Filters the EMG signal so unwanted low-frequency drift and high-frequency noise are reduced."
+                text="Filters the EMG signal to remove low-frequency drift (motion artifacts) and high-frequency noise. Ensures only relevant muscle signal frequencies are preserved. "
+                <p>Low-Pass Filter</p>
+                <ul>
+                  <li>10 nF Capacitor</li>
+                  <li>51 kΩ & 100 kΩ Resistors</li>
+                  <li>Gain of 2</li>
+                </ul>
+                <p>High-Pass Filter</p>
+                <ul>
+                  <li>0.22 nF Capacitor</li>
+                  <li>2.2 kΩ & 22 kΩ Resistors</li>
+                  <li>Gain of 20</li>
+                </ul>
               />
               <InfoBox
                 title="Inverting Amplifier"
