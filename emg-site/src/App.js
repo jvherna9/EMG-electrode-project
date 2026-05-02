@@ -73,7 +73,7 @@ function App() {
 
         {activeTab === "test" && (
           <section>
-            <h2>🧪 Test Format</h2>
+            <h2>✔ Test Format</h2>
             <p>We tested three electrode configurations:</p>
             <ul>
               <li>2 electrodes</li>
@@ -195,7 +195,7 @@ function App() {
               <li>Future tests should standardize contraction strength and electrode placement.</li>
             </ul>
 
-            <h2>💡 Why This Matters</h2>
+            <h2>‼️ Why This Matters ‼️</h2>
             <p>
               This project provides useful information for prosthetics and muscle-controlled
               devices because EMG systems need clean and reliable signals to interpret
