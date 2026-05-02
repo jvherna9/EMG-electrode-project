@@ -108,9 +108,9 @@ function App() {
                 title="Inverting Amplifier"
                 text="Amplifies the filtered EMG signal to a measurable volage range so it can be clearly recorded by the myDAQ. The inverting amplifier provides controlled gain based on resistor values."
               />
-            <ImageBox title="Band-Pass Filter Circuit" src="/Bandpassfilter.png" />
                 
             </div>
+              <ImageBox title="Band-Pass Filter Circuit" src="/Bandpassfilter.png" />
           </section>
         )}
 
