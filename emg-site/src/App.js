@@ -175,8 +175,8 @@ function App() {
           <section>
             <h2>⚠️ Limitations & Future Work</h2>
             <ul>
-              <li>Only two female subjects were analyzed.</li>
-              <li>Female A had less consistent contractions, which affected the data.</li>
+              <li>Only two female and male subjects were analyzed.</li>
+              <li>Female A & Male A had less consistent contractions, which affected the data.</li>
               <li>Electrode placement may have changed signal quality.</li>
               <li>More subjects are needed to confirm the trend.</li>
               <li>Future tests should standardize contraction strength and electrode placement.</li>
