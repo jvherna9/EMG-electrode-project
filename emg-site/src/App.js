@@ -39,7 +39,7 @@ function App() {
 
       <main style={styles.card}>
         {activeTab === "problem" && (
-          <section={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+          <section>
             <h2> ⚛ Problem ⚛</h2>
             <p>
               Modern upper-limb prosthetic systems rely on surface Electromyography (EMG) 
