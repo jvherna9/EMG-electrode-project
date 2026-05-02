@@ -165,9 +165,9 @@ function App() {
               Female & Male Results.
             </p>
 
-            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" />
-            <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" />
-            <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" />
+            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" src="/SNRmale.png"/>
+            <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" src="/MaleRMS.png/">
+            <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" src="/RestFullMale.png/"/>
           </section>
         )}
 
