@@ -106,8 +106,11 @@ function App() {
               />
               <InfoBox
                 title="Inverting Amplifier"
-                text="Amplifies the filtered EMG signal to a measurable volage rante so it can be clearly recorded by the myDAQ. The inverting amplifier provides controlled gain based on resistor values."
+                text="Amplifies the filtered EMG signal to a measurable volage range so it can be clearly recorded by the myDAQ. The inverting amplifier provides controlled gain based on resistor values."
               />
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <img src="/Bandpassfilter.png" alt="Band-Pass Filter Circuit" width="200" />
             </div>
           </section>
         )}
