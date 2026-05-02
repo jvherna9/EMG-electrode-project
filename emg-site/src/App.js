@@ -110,7 +110,7 @@ function App() {
               />
             </div>
             <div style={{ textAlign: "center" }}>
-              <Infobox
+              <InfoBox
                 title="Band-Pass Filter Schematic"
                <img src="/Bandpassfilter.png" alt="Band-Pass Filter Circuit" width="200" />
               />
