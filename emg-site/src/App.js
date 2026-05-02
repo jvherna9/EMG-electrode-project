@@ -19,7 +19,7 @@ function App() {
         <h1 style={{ ...styles.title, marginBottom: "30px" }}>Optimizing EMG Signals for Better Prosthetic Performance ᕙ(⇀‸↼‶)ᕗ</h1>
     
         <p style={styles.subtitle}>
-          Comparing 2, 4, and 6 electrode configurations for EMG signal detection!
+          Evaluating how electrode density impacts EMG signal quality and processing⚡
         </p>
       </header>
 
@@ -100,22 +100,25 @@ function App() {
                 title="Instrumentation Amplifier"
                 text="Measures small voltage differences from the electrodes while reducing common-mode noise, such as electrical inteference. This stage is critical for capturing clean EMG signals from muscle activity."
               />
-              <InfoBox
-                title="Band-Pass Filter"
-                text="Filters the EMG signal to remove low-frequency drift (motion artifacts) and high-frequency noise. Ensures only relevant muscle signal frequencies are preserved. "
-                <p>Low-Pass Filter</p>
+              <InfoBox title="Band-Pass Filter".
+                <p>
+                  Filters the EMG signal to remove low-frequency drift (motion artifacts)
+                  and high-frequency noise. Ensures only relevant muscle signal frequencies are preserved.
+                </p>
+
+                <p><strong>Low-Pass Filter</strong></p>
                 <ul>
                   <li>10 nF Capacitor</li>
                   <li>51 kΩ & 100 kΩ Resistors</li>
                   <li>Gain of 2</li>
                 </ul>
-                <p>High-Pass Filter</p>
-                <ul>
-                  <li>0.22 nF Capacitor</li>
-                  <li>2.2 kΩ & 22 kΩ Resistors</li>
-                  <li>Gain of 20</li>
-                </ul>
-              />
+
+               <p><strong>High-Pass Filter</strong></p>
+               <ul>
+                 <li>0.22 nF Capacitor</li>
+                 <li>2.2 kΩ & 22 kΩ Resistors</li>
+                 <li>Gain of 20</li>
+               </ul>
               <InfoBox
                 title="Inverting Amplifier"
                 text="Amplifies the signal so it can be clearly recorded by the myDAQ."
