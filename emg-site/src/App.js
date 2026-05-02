@@ -110,7 +110,7 @@ function App() {
               />
                 
             </div>
-              <ImageBox title="Band-Pass Filter Circuit" src="/Bandpassfilter.png" />
+              <ImageBox title="Band-Pass Filter Circuit" src="/Bandpassfilter.png" caption="A hand-drawn circuit of a Low-Band Filter and High-Pass Active filter. On the left, the Low-Band Filter contains a capacitor value of 10 nF and resistor values of 51 KΩ and 100 KΩ. The Low-Band Filter has an overall gain of 2.  The circuit contains a 0.22 nF capacitor and resistors with values of 2.2 KΩ and 22 KΩ. The op-amp has a gain of 10. Overall, the Band-Pass-Filter has a gain of 20."/>
           </section>
         )}
 
