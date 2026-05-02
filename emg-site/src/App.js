@@ -226,7 +226,7 @@ function InfoBox({ title, text }) {
 
 
 
-function ImageBox({ title, src, src2 }) {
+function ImageBox({ title, src, src2, text }) {
   return (
     <div style={{ ...styles.mediaBox, textAlign: "center" }}>
       <h3>{title}</h3>
@@ -239,37 +239,47 @@ function ImageBox({ title, src, src2 }) {
         marginTop: "15px"
       }}>
         
-        {/* Female */}
         <div>
           <img
             src={src}
-            alt="female"
+            alt="figure"
             style={{
               width: "300px",
               borderRadius: "12px",
               border: "2px solid #ffcce5"
             }}
           />
-          <p style={{ fontSize: "13px" }}>Female</p>
         </div>
 
-        {/* Male */}
         {src2 && (
           <div>
             <img
               src={src2}
-              alt="male"
+              alt="figure2"
               style={{
                 width: "300px",
                 borderRadius: "12px",
                 border: "2px solid #ffcce5"
               }}
             />
-            <p style={{ fontSize: "13px" }}>Male</p>
           </div>
         )}
-
       </div>
+
+      {/* ✅ Caption with italic styling */}
+      {text && (
+        <p style={{
+          marginTop: "12px",
+          fontSize: "14px",
+          color: "#6b2447",
+          maxWidth: "600px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          fontStyle: "italic"   // ⭐ THIS is the italic part
+        }}>
+          {text}
+        </p>
+      )}
     </div>
   );
 }
