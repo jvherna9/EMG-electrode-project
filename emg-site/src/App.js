@@ -351,6 +351,35 @@ const styles = {
     marginTop: "35px",
     color: "#8a3a5f",
   },
+  imageGrid: {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+  gap: "20px",
+  alignItems: "center",
+  marginTop: "15px",
+},
+
+resultImage: {
+  width: "100%",
+  maxWidth: "430px",
+  height: "auto",
+  borderRadius: "15px",
+  border: "2px solid #ffcce5",
+  boxShadow: "0 4px 12px rgba(255, 105, 180, 0.2)",
+},
+
+caption: {
+  fontSize: "14px",
+  color: "#8a3a5f",
+  marginTop: "8px",
+  fontWeight: "bold",
+},
+
+figureText: {
+  marginTop: "12px",
+  fontSize: "14px",
+  color: "#6b2447",
+},
 };
 
 export default App;
