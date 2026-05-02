@@ -193,7 +193,7 @@ function App() {
       </main>
 
       <footer style={styles.footer}>
-        <p>EMG Electrode Sensitivity Project • BME 370</p>
+        <p>EMG Prosthetic Signal Project • BME 370</p>
         <p style={{ marginTop: "10px" }}>
           Dayra Miles 𖹭, Deepashree Domlur Raghavendra ☘, Jhoana Hernandez 𓇼
         </p>
