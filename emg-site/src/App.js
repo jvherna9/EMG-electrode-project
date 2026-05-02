@@ -74,6 +74,11 @@ function App() {
               <li>4 electrodes</li>
               <li>6 electrodes</li>
             </ul>
+            <p>Electrode Placement:</p>
+            <ul>
+              <li>Electrodes were placed along the biceps brachii miscle, with a reference
+              electrode near the elbow to stabilize the signal.</li>
+                </ul>
             <p>For each setup, we recorded:</p>
             <ul>
               <li>Rest</li>
@@ -81,7 +86,8 @@ function App() {
               <li>Strong contraction</li>
             </ul>
             <p>
-              Data was collected using LabVIEW and myDAQ, then analyzed in MATLAB.
+              Signals were collected using LabVIEW and NI myDAQ, then processed and 
+              analyzed in MATLAB.
             </p>
           </section>
         )}
