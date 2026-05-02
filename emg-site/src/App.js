@@ -218,18 +218,7 @@ function InfoBox({ title, text }) {
   );
 }
 
-function VideoBox({ title, src, description }) {
-  return (
-    <div style={styles.mediaBox}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <video controls style={styles.video}>
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
-}
+
 
 function ImageBox({ title, src, src2 }) {
   return (
