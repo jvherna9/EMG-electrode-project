@@ -168,7 +168,11 @@ function App() {
               Female & Male Results.
             </p>
 
-            <ImageBox title="SNR vs Electrode Count" src="/SNRfemale.png" src2="/SNRmale.png"/>
+            <ImageBox 
+               title="SNR vs Electrode Count" 
+                src="/SNRfemale.png" 
+                src2="/MaleSNR.png" 
+            />
             <ImageBox title="Normalized RMS" src="/NormalizedRMSFemale.png" src2="/MaleRMS.png"/>
             <ImageBox title="Rest-to-Contraction Difference" src="/ResttoContractionFemale.png" src2="/RestFullMale.png"/>
           </section>
@@ -227,36 +231,50 @@ function VideoBox({ title, src, description }) {
   );
 }
 
-function ImageBox({ title, src, src2, text }) {
+function ImageBox({ title, src, src2 }) {
   return (
     <div style={{ ...styles.mediaBox, textAlign: "center" }}>
       <h3>{title}</h3>
 
-      <div style={styles.imageGrid}>
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "20px",
+        flexWrap: "wrap",
+        marginTop: "15px"
+      }}>
+        
+        {/* Female */}
         <div>
-          {src && (
-            <img
-              src={src}
-              alt={`${title} female`}
-              style={styles.resultImage}
-            />
-          )}
-          {src2 && <p style={styles.caption}>Female Results</p>}
+          <img
+            src={src}
+            alt="female"
+            style={{
+              width: "300px",
+              borderRadius: "12px",
+              border: "2px solid #ffcce5"
+            }}
+          />
+          <p style={{ fontSize: "13px" }}>Female</p>
         </div>
 
+        {/* Male */}
         {src2 && (
           <div>
             <img
               src={src2}
-              alt={`${title} male`}
-              style={styles.resultImage}
+              alt="male"
+              style={{
+                width: "300px",
+                borderRadius: "12px",
+                border: "2px solid #ffcce5"
+              }}
             />
-            <p style={styles.caption}>Male Results</p>
+            <p style={{ fontSize: "13px" }}>Male</p>
           </div>
         )}
-      </div>
 
-      {text && <p style={styles.figureText}>{text}</p>}
+      </div>
     </div>
   );
 }
